@@ -13,23 +13,34 @@ var inquirer = require("inquirer");
 //     if (err) throw err;
 //     runSearch();
 // });
-runSearch()
-function runSearch() {
-    inquirer.prompt({
-        name: "todo",
-        type: "list",
-        message: "What would you like to do?",
-        choices: [
-            "Buy a product",        ]
-    },{
-        name:"selectproduct",
-        type: "list",
-        message: "What product are you interested in?",
-        choise: [
-            ""
-        ]
 
-    })
+runActionPrompt()
+function runActionPrompt() {
+    inquirer.prompt(
+        [
+            {
+                name: "todo",
+                type: "list",
+                message: "What would you like to do?",
+                choices: [
+                    "Buy a product",
+                ]
+            }, {
+                name: "selectproduct",
+                type: "list",
+                message: "What product are you interested in?",
+                choices: [
+                    "product 1",
+                    "product 2",
+                    "product 3"
+                ]
+            }, {
+                name: "selectamount",
+                type: "input",
+                message: "how many would you like?",
+            }
+        ]
+    )
         .then(function (answer) {
             switch (answer.todo) {
 
