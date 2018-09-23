@@ -1,9 +1,6 @@
 # Vagrant VM Files
 .vagrant
 
-#gitignore
-.gitignore
-
 # Logs
 logs
 *.log
