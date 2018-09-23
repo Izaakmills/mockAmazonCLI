@@ -46,9 +46,7 @@ function runActionPrompt() {
                     // db calls
                     function queryDB() {
                         connection.query("SELECT * FROM products WHERE item_id = ?", [answer.productid], function (err, res) {
-                            console.log(res[0].price)
                             var price = res[0].price
-                            console.log(price)
                             if (res.stock_quantity - answer.amount <= 0) {
                                 console.log("Insufficient Quantity!")
                             } else (
