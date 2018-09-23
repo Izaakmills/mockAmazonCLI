@@ -16,16 +16,14 @@ var inquirer = require("inquirer");
 runSearch()
 function runSearch() {
     inquirer.prompt({
-        name: "todo",
+        name: "action",
         type: "list",
         message: "What would you like to do?",
         choices: [
-            "Buy a product",
             "View products for sale",
             "View Low Inventory",
             "Add to inventory",
             "Add new product",
-
         ]
     },{
         name:"selectproduct",
